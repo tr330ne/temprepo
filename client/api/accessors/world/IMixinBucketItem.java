@@ -1,0 +1,12 @@
+package org.rusherhack.client.api.accessors.world;
+
+import net.minecraft.world.item.BucketItem;
+import net.minecraft.world.level.material.Fluid;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Accessor;
+
+@Mixin(BucketItem.class)
+public interface IMixinBucketItem {
+   @Accessor("content")
+   Fluid getContent();
+}
